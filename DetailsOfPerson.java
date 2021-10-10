@@ -30,8 +30,8 @@ public class DetailsOfPerson {
 		this.state = state;
 	}
 	
-	public void Zip(int zip) {
-		this.zip = zip;
+	public void Zip1(int i) {
+		this.zip = i;
 	}
 	
 	public void PhoneNumber(String phoneNumber) {
@@ -46,6 +46,11 @@ public class DetailsOfPerson {
 		return "DetailaOfPerson [firstName=" + firstName + ", lastName=" + lastName + ", address=" + address + ", city="
 				+ city + ", state=" + state + ", zip=" + zip + ", phoneNumber=" + phoneNumber + ", email=" + email
 			    + "]";
+	}
+
+	public void Zip(int i) {
+		// TODO Auto-generated method stub
+		
 	}
 
 	
