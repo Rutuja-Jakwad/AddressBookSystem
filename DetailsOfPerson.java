@@ -10,36 +10,69 @@ public class DetailsOfPerson {
 	private String phoneNumber;
 	private String email;
 	
-	public void FirstName(String firstName) {
+	//setter
+	public void SetFirstName(String firstName) {
 		this.firstName = firstName;
+	}
+	
+	//getter
+	public String getFirstName() {
+		return this.firstName;
 	}
 	
 	public void LastName(String lastName) {
 		this.lastName = lastName;
 	}
 	
+	public String getLastName() {
+		return this.lastName;
+	}
+	
 	public void Address(String address) {
 		this.address = address;
+	}
+	
+	public String getAddress() {
+		return this.address;
 	}
 	
 	public void City(String city) {
 		this.city = city;
 	}
 	
+	public String getCity() {
+		return this.city;
+	}
+	
 	public void State(String state) {
 		this.state = state;
 	}
 	
-	public void Zip1(int i) {
+	public String getState() {
+		return this.state;
+	}
+	
+	public void Zip(int i) {
 		this.zip = i;
+	}
+	
+	public int getZip() {
+		return this.zip;
 	}
 	
 	public void PhoneNumber(String phoneNumber) {
 		this.phoneNumber = phoneNumber;
 	}
 	
+	public String getPhoneNumber() {
+		return this.phoneNumber;
+	}
+	
 	public void Email(String email) {
 		this.email = email;
+	}
+	public String getEmail() {
+		return this.email;
 	}
 	
 	public String toString() {
@@ -47,13 +80,5 @@ public class DetailsOfPerson {
 				+ city + ", state=" + state + ", zip=" + zip + ", phoneNumber=" + phoneNumber + ", email=" + email
 			    + "]";
 	}
-
-	public void Zip(int i) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	
-	
 
 }

@@ -1,54 +1,79 @@
 package com.bl.AddressBook;
 
+import java.util.Scanner;
+
 public class AddressBookMain {
 	public static void main(String[] args) {
-System.out.println("Welcome to the Address Book System");
 		
-		DetailsOfPerson person = new DetailsOfPerson();
-		person.FirstName("Rutuja");
-		person.LastName("Jakwad");
-		person.Address("B and c colony");
-		person.City("Nanded");
-		person.State("Maharashtra");
-		person.Zip(431605);
-		person.PhoneNumber("9423064636");
-		person.Email("rutuja@gmail.com");
-		System.out.println(person.toString());
-	
+		Scanner scan = new Scanner(System.in);
+		int numberOfPerson = 0;
 		
-		DetailsOfPerson person1 = new DetailsOfPerson();
-		person1.FirstName("Sakshi");
-		person1.LastName("Ghogare");
-		person1.Address("ITI");
-		person1.City("Nanded");
-		person1.State("Maharashtra");
-		person1.Zip(431605);
-		person1.PhoneNumber("9327659470");
-		person1.Email("sakshi@gmail.com");
-		System.out.println(person1.toString());
+//	    AddressBookMain newPerson = new AddressBookMain();
 		
-	   
-		DetailsOfPerson person2 = new DetailsOfPerson();
-		person2.FirstName("Namrata");
-		person2.LastName("Bajaj");
-		person2.Address("Navi Street");
-		person2.City("Pune");
-		person2.State("Maharashtra");
-		person2.Zip(400011);
-		person2.PhoneNumber("8907623425");
-		person2.Email("namrata@gmail.com");
-		System.out.println(person2.toString());		
-
-
-		
-		
-		
-		
-		
+		System.out.println("How many person do you want to enter: ");
+	    numberOfPerson = scan.nextInt();
+	    
+	    DetailsOfPerson []detailsOfPersons; 
+	    detailsOfPersons= new DetailsOfPerson[numberOfPerson];
+	    
+	    
+	    
+	    for(int i = 0; i < numberOfPerson; i++) {
+	    	detailsOfPersons[i] = new DetailsOfPerson();
+	    	
+	    	System.out.println("Enter your firstName: ");
+	    	detailsOfPersons[i].SetFirstName(scan.next());
+			
+			System.out.println("Enter your lastName: ");
+			detailsOfPersons[i].LastName(scan.next());
+			
+			System.out.println("Enter your address: ");
+			detailsOfPersons[i].Address(scan.next());
+			
+			System.out.println("Enter your city: ");
+			detailsOfPersons[i].City(scan.next());
+			
+			System.out.println("Enter your state: ");
+			detailsOfPersons[i].State(scan.next());
+			
+			System.out.println("Enter your pincode: ");
+			detailsOfPersons[i].Zip(scan.nextInt());
+			
+			System.out.println("Enter your email: ");
+			detailsOfPersons[i].Email(scan.next());
+	    }
+	    
+	    for(DetailsOfPerson details : detailsOfPersons) {
+	    	System.out.print(details.getFirstName());
+	    }
+	    
+	    for(DetailsOfPerson details : detailsOfPersons) {
+	    	System.out.print(details.getLastName());
+	    }
+	    
+	    for(DetailsOfPerson details : detailsOfPersons) {
+	    	System.out.print(details.getAddress());
+	    }
+	    
+	    for(DetailsOfPerson details : detailsOfPersons) {
+	    	System.out.print(details.getCity());
+	    }
+	    
+	    for(DetailsOfPerson details : detailsOfPersons) {
+	    	System.out.print(details.getState());
+	    }
+	    
+	    for(DetailsOfPerson details : detailsOfPersons) {
+	    	System.out.print(details.getZip());
+	    }
+	    
+	    for(DetailsOfPerson details : detailsOfPersons) {
+	    	System.out.print(details.getPhoneNumber());
+	    }
+	    
+	    for(DetailsOfPerson details : detailsOfPersons) {
+	    	System.out.print(details.getEmail());
+	    }
 	}
-
-	
-	
-
 
 }
